@@ -41,7 +41,7 @@ object MethodNotations extends App {
   println(mary()) // equivalent to previous statement
 
 
-  println(mary + "Im that nigga")
+  println(mary + "Im that Guy")
   println(+mary)
 
   println(mary learnsScala)
