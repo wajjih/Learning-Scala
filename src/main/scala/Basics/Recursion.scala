@@ -1,12 +1,14 @@
+package Basics
+
 import scala.annotation.tailrec
 
 object Recursion extends App {
   def greeting(name: String, age: Int): String = s"name is ${name}, age is ${age}"
 
-//  def multiGreeting(n: Int): String = {
-//    def myGreeting(name: String, age: Int): String = s"name is ${name}, age is ${age}"
-//    
-//  }
+  //  def multiGreeting(n: Int): String = {
+  //    def myGreeting(name: String, age: Int): String = s"name is ${name}, age is ${age}"
+  //    
+  //  }
   def factorial(n: Int): Int =
     if (n <= 1) 1
     else {
@@ -15,19 +17,19 @@ object Recursion extends App {
       println("Computed factorial of " + n)
 
       result
-  }
+    }
 
   factorial(4)
   println("----------")
   println(factorial(4))
 
-  def anotherFactorial(i: Int): Int =  {
+  def anotherFactorial(i: Int): Int = {
     @tailrec
     def factHelper(x: Int, acc: Int): Int =
-      if(x <= 1) acc
-      else factHelper(x-1,x *  acc) // Tail Recursion = use recursive call as the LAST expression
+      if (x <= 1) acc
+      else factHelper(x - 1, x * acc) // Tail Recursion = use recursive call as the LAST expression
 
-    factHelper(i,1)
+    factHelper(i, 1)
   }
 
   println(anotherFactorial(100))
@@ -35,16 +37,10 @@ object Recursion extends App {
 
   @tailrec
   def greeting(name: String, n: Int, acc: String): String = {
-    if(n <= 0) acc
-    else greeting(name, n-1, name + acc)
+    if (n <= 0) acc
+    else greeting(name, n - 1, name + acc)
   }
-  println(greeting("My name is wajjih and I am 21 years old",3, ""))
+
+  println(greeting("My name is wajjih and I am 21 years old", 3, ""))
 
 }
-
-// WHEN YOU NEED LOOPS, USE TAIL RECURSION
-
-// Concatenate a string n times
-
-
-
