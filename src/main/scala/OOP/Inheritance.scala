@@ -1,6 +1,6 @@
 package OOP
 
-object InheritanceAndTraits extends App {
+object Inheritance extends App {
   // Single Class Inheritance
   sealed class Animal {
     val creatureType = "wild"
